@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "C:\Users\cetecom\Desktop\MiProyecto\MiProyecto\static\css\login.css" %}'>
+    <title>Inicio de Sesion</title>
+</head>
+<body style="background-image: url('{% static "C:\Users\cetecom\Desktop\MiProyecto\MiProyecto\static\imagenes\Taller.jpg" %}')">
+    <div class="container">
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            <h1>Iniciar Sesión</h1>
+            {% if error_message %}
+                <p class="error">{{ error_message }}</p>
+            {% endif %}
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        
+    </div>
+</body>
+</html>

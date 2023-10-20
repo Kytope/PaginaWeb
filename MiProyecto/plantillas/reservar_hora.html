@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Tus metadatos y enlaces a archivos CSS y scripts aquí -->
+    <title>Reservar Hora</title>
+</head>
+<body>
+    <header>
+        <h1>Taller Mecánico ServiExpress</h1>
+    </header>
+
+    <section class="reserva">
+        <h2>Reservar Hora</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Reservar</button>
+        </form>
+        
+    </section>
+
+    <footer class="footer">
+        <!-- Tu pie de página aquí -->
+    </footer>
+</body>
+</html>
+

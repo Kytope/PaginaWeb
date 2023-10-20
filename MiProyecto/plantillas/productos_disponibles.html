@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{% static "C:\Users\CETECOM\Desktop\MiProyecto\MiProyecto\static\css\productos.css" %}'>
+    <title>Productos</title>
+</head>
+<body>
+    <header>
+        <h1>Taller Mecánico ServiExpress</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}?next={% url 'inicio' %}" class="cta-button logout-button">Log Out</a>
+        {% endif %}
+    </header>
+
+
+    <div class="centered-heading">
+        <h1>Productos Disponibles</h1>
+    </div>
+    <ul class="product-list">
+        {% for producto in productos %}
+            <li class="product-card">
+                <h3>{{ producto.nombre }}</h3>
+                <p>Descripción: {{ producto.descripcion }}</p>
+                <p>Precio: CLP {{ producto.precio }}</p>
+                <img src="{% static producto.imagen.url %}" alt="{{ producto.nombre }}" class="product-image">
+                <button class="cta-button">Comprar</button>
+            </li>
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>

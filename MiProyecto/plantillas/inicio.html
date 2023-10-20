@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecanico ServiExpress</title>
+    <link rel="stylesheet" href='{% static "C:\Users\cetecom\Desktop\MiProyecto\MiProyecto\static\css\inicio.css" %}'>
+</head>
+<body>
+    <header>
+        <h1>Taller Mecánico ServiExpress</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}?next={% url 'inicio' %}" class="cta-button logout-button">Log Out</a>
+        {% endif %}
+    </header>
+    
+    
+
+    <section class="hero" style="background-image: url('{% static 'imagenes\Taller.jpg' %}')">
+        {% if user.is_authenticated %}
+            <h2>Bienvenido, {{ user.username }}</h2>
+            <a href="{% url 'reservar_hora' %}" class="cta-button">Reservar una hora</a>
+        {% else %}
+            <h2>Bienvenido a nuestro taller mecánico</h2>
+            <p>Servicios de reparación y mantenimiento para su vehículo</p>
+            <a href="{% url 'login' %}" class="cta-button">Login</a>
+            <a href="#" class="cta-button">Register</a>
+        {% endif %}
+    </section>
+
+    <section class="services">
+        <div class="service-container">
+            <div class="service">
+                <img src="{% static 'imagenes\Reloj.png' %}" alt="Servicio 1" class="service-image">
+                <h3 class="service-title">Agilidad en los tiempos</h3>
+                <p class="service-description">Calidad de Servicios</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'imagenes\Transporte.png' %}" alt="Servicio 2" class="service-image">
+                <h3 class="service-title">Entrega directo a su hogar</h3>
+                <p class="service-description">Profesionales Certificados</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'imagenes\Billetera.png' %}" alt="Servicio 3" class="service-image">
+                <h3 class="service-title">Los mejores precios</h3>
+                <p class="service-description">Productos de Calidad</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'imagenes\SerivicioCliente.png' %}" alt="Servicio 4" class="service-image">
+                <h3 class="service-title">Soporte 24/7</h3>
+                <p class="service-description">Mecanicos Especializados</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                <p>&copy; 2023 ServiExpress</p>
+            </div>
+            <div class="contact-info">
+                <p>Telefono: +123456789</p>
+                <p>Direccion: Calle Principal, Ciudad</p>
+            </div>
+            <div class="social-media">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

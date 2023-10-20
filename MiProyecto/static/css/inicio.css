@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333533;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el botón de Log Out */
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+/* Estilo para la sección hero */
+.hero {
+    background-size: cover; /* Ajustar la imagen al tamaño de la sección */
+    background-position: center; /* Centrar la imagen horizontalmente y verticalmente */
+    text-align: center;
+    padding: 200px 0;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 36px; /* Tamaño de fuente más grande */
+    -webkit-text-stroke: 2px black; /* Borde negro de 2px alrededor del texto (para navegadores basados en WebKit como Chrome y Safari) */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f7b801;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.cta-button:hover {
+    background-color: #333533; /* Cambia a color rosado al pasar el mouse */
+    transform: scale(1.05); /* Hacer un pequeño zoom al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave de la propiedad de transformación */
+}
+
+/* Estilo para el contenedor de servicios */
+.services {
+    background-color: #f0f0f0; /* Fondo gris */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el contenedor de los servicios */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas con igual anchura */
+    grid-gap: 10px; /* Espacio entre los servicios, tanto entre filas como entre columnas */
+    justify-items: center; /* Centrar horizontalmente */
+    margin: 0 auto; /* Centrar horizontalmente el contenedor de servicios */
+}
+
+/* Estilo para cada servicio */
+.service {
+    background-color: #ffffff; /* Fondo blanco para cada servicio */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s; /* Animación de transformación al pasar el mouse */
+    width: 300px; /* Ancho fijo para cada servicio */
+    height: 300px; /* Altura fija para cada servicio */
+    margin: 5px; /* Espacio horizontal entre los servicios */
+    border: 2px solid #000; /* Borde negro */
+}
+
+/* Cambio de estilo al pasar el mouse para cada servicio */
+.service:hover {
+    transform: scale(1.1); /* Hacer un pequeño zoom al pasar el mouse */
+}
+
+.service:hover .service-title {
+    font-size: 24px; /* Agrandar el tamaño del título */
+    color: #f7b801; /* Cambiar el color del título a naranja */
+    transition: font-size 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.service-image {
+    max-width: 150px;
+    height: 150px;
+}
+
+
+/* Estilo para el footer */
+.footer {
+    background-color: #333533;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilo para el contenido del footer */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para el texto de copyright */
+.copyright {
+    flex: 1;
+}
+
+/* Estilo para la información de contacto */
+.contact-info {
+    flex: 2;
+    text-align: center;
+}
+
+/* Estilo para los enlaces de redes sociales */
+.social-media {
+    flex: 1;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
